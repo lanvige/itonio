@@ -66,10 +66,10 @@ BRUSHED.filter = function (){
           layoutMode : 'fitRows'
         });
         
-        // layout Isotope again after all images have loaded
-        $container.imagesLoaded( function() {
-            $container.isotope('layout');
-        });
+        // // layout Isotope again after all images have loaded
+        // $container.imagesLoaded( function() {
+        //     $container.isotope('layout');
+        // });
 
         // filter items when filter link is clicked
         var $optionSets = $('#options .option-set'),

@@ -66,6 +66,11 @@ BRUSHED.filter = function (){
           layoutMode : 'fitRows'
         });
         
+        // layout Isotope again after all images have loaded
+        $container.imagesLoaded( function() {
+            $container.isotope('layout');
+        });
+
         // filter items when filter link is clicked
         var $optionSets = $('#options .option-set'),
             $optionLinks = $optionSets.find('a');
@@ -350,9 +355,6 @@ $(document).ready(function(){
     BRUSHED.goSection();
     BRUSHED.goUp();
     BRUSHED.filter();
-
-    $("#projects").isotope('layout')
-
     BRUSHED.fancyBox();
     BRUSHED.contactForm();
     BRUSHED.scrollToTop();

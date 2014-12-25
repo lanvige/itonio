@@ -65,6 +65,8 @@ BRUSHED.filter = function (){
           itemSelector : '.item-thumbs',
           layoutMode : 'fitRows'
         });
+
+        $container.isotope('reLayout');
         
         // filter items when filter link is clicked
         var $optionSets = $('#options .option-set'),
@@ -350,7 +352,6 @@ $(document).ready(function(){
     BRUSHED.goSection();
     BRUSHED.goUp();
     BRUSHED.filter();
-    $('#projects').animate({opacity: 1.0}, 200);
     BRUSHED.fancyBox();
     BRUSHED.contactForm();
     BRUSHED.scrollToTop();
